@@ -15,3 +15,7 @@ To push the results to a .txt file:
 Windows PowerShell: .\nvbiosdump.exe ROMFile.bin > ROMFileDump.txt
 Windows CMD: nvbiosdump.exe ROMFile.bin > ROMFileDump.txt
 Linux: ./nvbiosdump ROMFile.bin > ROMFileDump.txt
+
+|---SIGNING----|
+
+Want to sign your VBIOS? Head on over to http://gfs.nvidia.com/, and roll your own signatures! Currently only works for mining cards; for others, you'll need to do a hardware flash. 
