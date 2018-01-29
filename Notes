@@ -2,5 +2,54 @@
 
 // These are my notes. There are many like them, but these ones are mine. 
 
+// Some of this information is courtesy of @qlin01 on Github - all credits go to him for his amazing work on NVIDIA's latency timings for mining cards.
+
 
 - The DL/DT Table is related to how quickly the current can change, which directly impacts clock gating. 
+
+- The P106-100 Memory Clock Ranges are: 
+	0-540
+	541-1299
+	1300-2800
+	2801-3300
+	3301-3700
+	3701-4500
+
+- The memory clock for each pState is:
+	P8: 405
+	P5: 810
+	P0: 4004
+
+- For those who claim to be able to 'inject' stuff into the NVIDIA driver - take heed. It's most likely not (easily) possible. This isn't like AMD, where the driver does most of the management for settings; Falcon is there. Watching. Eating mice. And whatever else Falcon's do. 
+
+- A GeForce card cannot be turned into a pure compute card without blowing some fuses. 
+
+||-NVIDIA P104-100 PCP Board Chip Identification-||
+
+U3: IS25W0040
+	NLE 1651
+	P1494813
+
+U19: INA
+	 3-2-2-1
+	 T1 721
+	 AXN4
+
+U25: uP1951P
+	 SSA76E
+
+U852: uP1735P
+	  SGV68J
+
+Q49: M3816N
+	 701
+	 05R
+
+C239: V3605
+	  HNL366
+
+U27: 7J = 4E
+	 G1V
+
+U505: uP9511P
+	  TGP6A6
