@@ -1,9 +1,7 @@
-|---NOTES---|
-
 // These are my notes. There are many like them, but these ones are mine. 
-
 // Some of this information is courtesy of @qlin01 on Github - all credits go to him for his amazing work on NVIDIA's latency timings for mining cards.
 
+||-VBIOS Findings-||
 
 - The DL/DT Table is related to how quickly the current can change, which directly impacts clock gating. 
 
@@ -19,6 +17,8 @@
 	P8: 405
 	P5: 810
 	P0: 4004
+
+||-On GeForce-||
 
 - For those who claim to be able to 'inject' stuff into the NVIDIA driver - take heed. It's most likely not (easily) possible. This isn't like AMD, where the driver does most of the management for settings; Falcon is there. Watching. Eating mice. And whatever else Falcon's do. 
 
@@ -53,3 +53,23 @@ U27: 7J = 4E
 
 U505: uP9511P
 	  TGP6A6
+
+||-FLashing a NVIDIA Bios-||
+
+1) Turn off protection:
+    nvflash64 --protectoff
+    For more than one card:
+    nvflash64 --protectoff 6 (if you have 7 GPUs, etc.)
+2) Backup original BIOS:
+    nvflash64 --save filename.rom
+3) Flash BIOS:
+    nvflash64 -6 biosfilename.rom
+
+If your screen goes black, hit y twice.
+
+Reboot, reinstall driver, reboot again. 
+
+4) To flash multiple cards:
+    nvflash64 --list
+    nvflash64 -6 --index=0 BIOSfilename.rom
+    nvflash64 -6 --index=1 BIOSfilename.rom
