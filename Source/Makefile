@@ -6,12 +6,12 @@ CPPFLAGS = -std=gnu99
 LDFLAGS=-O2
  
 # require libjansson-dev package
+
 LDLIBS = -ljansson
  
 SOURCES = nvbiosdump.c
 OBJECTS=$(SOURCES:.cpp=.o)
 OUTPUT=nvbiosdump
- 
  
 CODEDIR1=jansson
  
@@ -21,7 +21,6 @@ all: depcode1 $(SOURCES) $(OUTPUT)
  
 #depcode1:
 #       $(MAKE) -C $(CODEDIR1)
- 
  
 $(SOURCES): nvbios.h
  
@@ -39,5 +38,4 @@ clean:
  
 install: clean all
         strip -s $(OUTPUT)
- 
  
