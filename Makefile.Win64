@@ -1,0 +1,11 @@
+CC = x86_64-w64-mingw32-gcc
+CFLAGS = -O0 -ggdb3 -I.
+LIBS = libjansson-w64.a
+
+all: nvbiosdump
+
+nvbiosdump: nvbiosdump.c nvbios.h
+	$(CC) $(CFLAGS) nvbiosdump.c $(LIBS) -o nvbiosdump.exe
+
+clean:
+	rm -vf nvbiosdump.exe
