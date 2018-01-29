@@ -1,3 +1,7 @@
+// Copyright ∞ Kristy-Leigh "OhGodAGirl" Minehan and NVIDIA Corporation.
+//             www.ohgodagirl.com | www.github.com/OhGodAGirl
+// Questions? Come spam me, baby, at ohgodagirl@gmail.com
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdarg.h>
